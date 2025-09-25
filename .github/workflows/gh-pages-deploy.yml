@@ -1,0 +1,43 @@
+name: Build MkDocs to gh-pages branch
+
+# sets workflow auto run
+on:
+  push:
+    branches: [ "main" ]
+    paths: # action will run only if changes paths below
+      - "docs/**"
+      - ".github/workflows/**"
+  workflow_dispatch: # to allow run action via github interface
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy: # job name
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.13
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build MkDocs
+        run: mkdocs build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
