@@ -1,2 +1,8 @@
+# virtual environment
+/venv
+
 # JetBrains IDE
 /.idea
+
+# MkDocs artifacts
+/site
