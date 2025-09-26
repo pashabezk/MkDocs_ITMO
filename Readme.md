@@ -1,7 +1,7 @@
-# Template
-This repository is template for different projects.
+# Создание и развертывание статического сайта
 
-Contains:
-* readme file;
-* editor config file;
-* gitignore file
+Репозиторий создан в рамках обучения по предмету _Проектирование и развертывание веб-решений в эко-системе Python_.
+
+Получившийся сайт расположен по адресу: [pashabezk.github.io/MkDocs_ITMO](https://pashabezk.github.io/MkDocs_ITMO/report/).
+
+Отчёт о проделанной работе и ответы на вопросы находятся в файле [report.md](/docs/report.md)
