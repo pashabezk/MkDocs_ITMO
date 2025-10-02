@@ -35,7 +35,7 @@ extra_css:
 
 ```sh
 # установка минификаторов
-pip install htmlmin
+pip install minify-html
 
 # фиксация зависимостей в файл
 pip freeze > requirements.txt

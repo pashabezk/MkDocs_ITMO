@@ -1,10 +1,10 @@
 import os
-import htmlmin
+import minify_html
 
 TARGET_DIR = "site"
 
 
-def minify_html():
+def minify_html_files():
 	if not os.path.isdir(TARGET_DIR):
 		print(f"Error: dir '{TARGET_DIR}' not found")
 		return
@@ -26,12 +26,7 @@ def minify_html():
 
 					original_size = os.path.getsize(file_path)
 
-					minified_content = htmlmin.minify(
-						original_content,
-						remove_comments=True,
-						remove_empty_space=True,
-						reduce_boolean_attributes=True
-					)
+					minified_content = minify_html.minify(original_content)
 
 					with open(file_path, 'w', encoding='utf-8') as f:
 						f.write(minified_content)
@@ -53,4 +48,4 @@ def minify_html():
 
 
 if __name__ == "__main__":
-	minify_html()
+	minify_html_files()
