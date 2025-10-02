@@ -4,4 +4,6 @@
 
 Получившийся сайт расположен по адресу: [pashabezk.github.io/MkDocs_ITMO](https://pashabezk.github.io/MkDocs_ITMO/report/).
 
-Отчёт о проделанной работе и ответы на вопросы находятся в файле [report.md](/docs/report.md)
+Отчёты о лаборторных работах:
+- 2.1 Создание и развертывание статического сайта [report-lab1.md](/docs/report-lab1.md)
+- 2.2 Кастомизация статического сайта [report-lab2.md](/docs/report-lab2.md)

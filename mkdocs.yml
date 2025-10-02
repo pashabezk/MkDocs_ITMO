@@ -1,1 +1,7 @@
 site_name: My Docs
+
+theme:
+    name: flatly
+
+extra_css:
+  - styles/styles.css
