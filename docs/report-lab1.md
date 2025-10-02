@@ -27,7 +27,7 @@ venv/Scripts/Activate.ps1
 # установка mkdocs
 pip install mkdocs
 
-# фиксация пакетов в файл
+# фиксация зависимостей в файл
 pip freeze > requirements.txt
 ```
 
