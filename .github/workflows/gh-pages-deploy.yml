@@ -5,8 +5,10 @@ on:
   push:
     branches: [ "main" ]
     paths: # action will run only if changes paths below
-      - "docs/**"
       - ".github/workflows/**"
+      - "docs/**"
+      - "scripts/**"
+      - "requirements.txt"
   workflow_dispatch: # to allow run action via github interface
 
 permissions:
@@ -33,7 +35,7 @@ jobs:
       - name: Build MkDocs
         run: mkdocs build
 
-      - name: Minify HTML
+      - name: Minify HTML and CSS
         run: python scripts/main.py
 
       - name: Upload artifact
