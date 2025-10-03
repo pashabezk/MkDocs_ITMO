@@ -1,13 +1,12 @@
-html {
-	min-height: 100dvh;
+.md-header__title.pb-title-container {
+	margin: 0 4rem;
+	text-align: center;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100dvh;
+.pb-title-container a {
+	text-decoration: underline dotted;
 }
 
-body > .container {
-	flex-grow: 1;
+.pb-title-container a:hover {
+	color: lightblue;
 }

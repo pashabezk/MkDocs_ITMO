@@ -4,12 +4,12 @@
 
 ## Подключение темы и кастомизация
 
-Была добавлена тема из пакета [mkdocs-bootswatch](https://mkdocs.github.io/mkdocs-bootswatch/).
+Была добавлена тема [mkdocs-material](https://squidfunk.github.io/mkdocs-material/).
 Для этого была добавлена соответствующая зависимость.
 
 ```sh
 # установка темы
-pip install mkdocs-bootswatch
+pip install mkdocs-material
 
 # фиксация зависимостей в файл
 pip freeze > requirements.txt
@@ -19,16 +19,38 @@ pip freeze > requirements.txt
 
 ```yml
 theme:
-    name: flatly
+    name: material
 ```
 
-У этой темы есть проблема: если контента на странице мало, то футер не прижимается к низу.
-Для исправления был добавлен файл с кастомными стилями (`/docs/styles/styles.css`).
+Для переопределения футера и хедера в теме в проект была добавлена папка `overrides`, и к ней прописывается путь в параметре custom_dir
+
+```yml
+theme:
+  name: material
+  custom_dir: overrides
+```
+
+Внутри папки `overrides` были добавлены html-файлы для переопределения соответствующих частей.
+
+Для стилизации хедера потребовалось добавить некоторые стили.
+Они были занесены в файл с кастомными стилями (`/docs/styles/styles.css`).
 Чтобы стили подтянулись при генерации сайта в файл `mkdocs.yaml` были добавлены соответствующие строчки
 
 ```yml
 extra_css:
   - styles/styles.css
+```
+
+## Добавление метаинформации
+
+Для добавления метаинформации в генерируемые html-файлы, были использованы возможности конфигурации MkDocs.
+В файл `mkdocs.yaml` были добавлены следующие строчки
+
+```yml
+site_name: Auto generated docs
+site_url: https://pashabezk.github.io/MkDocs_ITMO/
+site_author: Безкоровайный Павел
+site_description: Генерация документации с помощью MkDocs
 ```
 
 ## Минификация

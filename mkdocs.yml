@@ -1,7 +1,11 @@
-site_name: My Docs
+site_name: Auto generated docs
+site_url: https://pashabezk.github.io/MkDocs_ITMO/
+site_author: Безкоровайный Павел
+site_description: Генерация документации с помощью MkDocs
 
 theme:
-    name: flatly
+  name: material
+  custom_dir: overrides
 
 extra_css:
   - styles/styles.css
